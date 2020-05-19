@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from demo.ninjateam.org/html/zeiss/light/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2020 14:55:25 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title> Pivotalsoft Covid-19 Dashboard</title>
+
+
+
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css">
+
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="assets/styles/style.min.css">
+<link rel="stylesheet" href="assets/styles/custom.css">
+	
+	<!-- Material Design Icon -->
+	<link rel="stylesheet" href="assets/fonts/material-design/css/materialdesignicons.css">
+
+	<!-- mCustomScrollbar -->
+	<link rel="stylesheet" href="assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="assets/plugin/waves/waves.min.css">
+
+	<!-- Sweet Alert -->
+	<link rel="stylesheet" href="assets/plugin/sweet-alert/sweetalert.css">
+	
+	<!-- Percent Circle -->
+	<link rel="stylesheet" href="assets/plugin/percircle/css/percircle.css">
+
+	<!-- Chartist Chart -->
+	<link rel="stylesheet" href="assets/plugin/chart/chartist/chartist.min.css">
+
+	<!-- FullCalendar -->
+	<link rel="stylesheet" href="assets/plugin/fullcalendar/fullcalendar.min.css">
+	<link rel="stylesheet" href="assets/plugin/fullcalendar/fullcalendar.print.css" media='print'>
+
+	<!-- Color Picker -->
+	<link rel="stylesheet" href="assets/color-switcher/color-switcher.min.css">
+</head>
+
+<body>
+<div class="main-menu">
+	<header class="header">
+		<a href="#" class="logo"> Pivotalsoft Covid-19 </a>
+		<button type="button" class="button-close fa fa-times js__menu_close"></button>
+	</header>
+	<!-- /.header -->
+	<div class="content">
+
+		<div class="navigation">
+			<ul class="menu js__accordion">
+				<li class="current">
+					<a class="waves-effect" href="#"><i class="menu-icon mdi mdi-view-dashboard"></i><span>Dashboard</span></a>
+				</li>
+				<li>
+					<a class="waves-effect parent-item js__control" href="#"><i class=" fa fa-globe"></i>&nbsp;&nbsp;<span>Select country</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<ul class="sub-menu js__content countrylist">
+					
+					</ul>
+					<!-- /.sub-menu js__content -->
+				</li>
+				
+				
+			</ul>
+			<!-- /.menu js__accordion -->
+		</div>
+		<!-- /.navigation -->
+	</div>
+	<!-- /.content -->
+</div>
+<!-- /.main-menu -->
+
+<div class="fixed-navbar">
+	<div class="float-left">
+		<button type="button" class="menu-mobile-button fas fa-bars js__menu_mobile"></button>
+		<h1 class="page-title">Home</h1>
+		<!-- /.page-title -->
+	</div>
+	<!-- /.float-left -->
+	<div class="float-right">
+		
+	
+	</div>
+	<!-- /.float-right -->
+</div>
+<!-- /.fixed-navbar -->
+
+
+<!-- /#notification-popup -->
+
+
+	<!-- /.content -->
+</div>
+
+<div id="wrapper">
+	<div class="main-content">
+
+		<p class="h3">Country Name : <span class="countryname"></span></p>
+		<div class="row small-spacing">
+			<div class="col-xl-3 col-lg-6 col-12">
+				<div class="box-content bg-warning text-white">
+					<div class="statistics-box with-icon">
+						<i class="ico small fa fa-calendar"></i>
+						<p class="text text-white">Date</p>
+						<h2 class="counter date"></h2>
+					</div>
+				</div>
+				<!-- /.box-content -->
+			</div>
+			
+			<div class="col-xl-3 col-lg-6 col-12">
+				<div class="box-content bg-info text-white">
+					<div class="statistics-box with-icon">
+						<i class="ico small fa fa-check"></i>
+						<p class="text text-white">Conformed</p>
+						<h2 class="counter conformed"></h2>
+					</div>
+				</div>
+				<!-- /.box-content -->
+			</div>
+			<!-- /.col-xl-3 col-lg-6 col-12 -->
+			<div class="col-xl-3 col-lg-6 col-12">
+				<div class="box-content bg-danger text-white">
+					<div class="statistics-box with-icon">
+						<i class="ico small fas fa-bed"></i>
+						<p class="text text-white ">Deaths</p>
+						<h2 class="counter deaths"></h2>
+					</div>
+				</div>
+				<!-- /.box-content -->
+			</div>
+			<!-- /.col-xl-3 col-lg-6 col-12 -->
+			<div class="col-xl-3 col-lg-6 col-12">
+				<div class="box-content bg-success text-white">
+					<div class="statistics-box with-icon">
+						<i class="ico small fas fa-smile"></i>
+						<p class="text text-white ">Recoverd</p>
+						<h2 class="counter recoverd"></h2>
+					</div>
+				</div>
+				<!-- /.box-content -->
+			</div>
+		</div>
+		
+
+		<div id="donut-chart"></div>
+		
+	
+
+		<table class="table table-dark">
+			<thead>
+			  <tr>
+				<th scope="col">Date</th>
+				<th scope="col">conformed</th>
+				<th scope="col">deaths</th>
+				<th scope="col">recoverd</th>
+			  </tr>
+			</thead>
+			<tbody class="tbody">
+			 
+			</tbody>
+		  </table>
+		
+		
+				<!-- /.box-content -->
+			</div>
+			<!-- /.col-xl-6 col-12 -->
+		</div>
+		<!-- /.row -->		
+		<footer class="footer">
+			<ul class="list-inline">
+				<li>2016 © NinjaAdmin.</li>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Terms</a></li>
+				<li><a href="#">Help</a></li>
+			</ul>
+		</footer>
+	</div>
+	<!-- /.main-content -->
+</div><!--/#wrapper -->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="assets/script/html5shiv.min.js"></script>
+		<script src="assets/script/respond.min.js"></script>
+	<![endif]-->
+	<!-- 
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="assets/scripts/jquery.min.js"></script>
+	<script src="assets/scripts/modernizr.min.js"></script>
+	<script src="assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="assets/plugin/nprogress/nprogress.js"></script>
+	<script src="assets/plugin/sweet-alert/sweetalert.min.js"></script>
+	<script src="assets/plugin/waves/waves.min.js"></script>
+	<!-- Full Screen Plugin -->
+	<script src="assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
+
+	<!-- Google Chart -->
+	<script type="text/javascript" src="../../../../www.gstatic.com/charts/loader.js"></script>
+
+	<!-- chart.js Chart -->
+	<script src="assets/plugin/chart/chartjs/Chart.bundle.min.js"></script>
+	<script src="assets/scripts/chart.chartjs.init.min.js"></script>
+
+	<!-- FullCalendar -->
+	<script src="assets/plugin/moment/moment.js"></script>
+	<script src="assets/plugin/fullcalendar/fullcalendar.min.js"></script>
+	<script src="assets/scripts/fullcalendar.init.js"></script>
+
+	<!-- Sparkline Chart -->
+	<script src="assets/plugin/chart/sparkline/jquery.sparkline.min.js"></script>
+	<script src="assets/scripts/chart.sparkline.init.min.js"></script>
+
+	<script src="assets/scripts/main.min.js"></script>
+<script src="assets/scripts/mycommon.js"></script>
+	<script src="assets/color-switcher/color-switcher.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+
+	<script src="assets/scripts/country.js"></script>
+</body>
+
+<!-- Mirrored from demo.ninjateam.org/html/zeiss/light/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Apr 2020 14:55:59 GMT -->
+</html>
